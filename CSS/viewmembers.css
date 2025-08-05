@@ -1,0 +1,339 @@
+/* Import the shared admin styles */
+@import url('admin.css');
+
+/* Container for view members section */
+.viewmembers-container {
+  background-color: #222222; /* Dark background */
+  padding: 40px 35px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+/* Heading styling */
+.viewmembers-container h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+/* Filter bar container */
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap filters to new line if needed */
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Filter elements styling: dropdown, input, button */
+.filters select,
+.filters input,
+.filters button {
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-color: #333333;
+  color: white;
+}
+
+/* Filter button styling */
+.filters button {
+  background-color: #ff0033; /* Bright red for visibility */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for filter button */
+.filters button:hover {
+  background-color: #ff1a4b;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #333333;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Table header and cell styling */
+table th,
+table td {
+  padding: 12px 14px;
+  border: 1px solid #444444;
+  text-align: center;
+}
+
+/* Header row styling */
+table th {
+  background-color: #ff0033;
+  font-weight: 600;
+}
+
+/* Dropdown specifically for plan filter */
+#planFilter {
+  width: 220px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  appearance: none;
+
+  /* Add dropdown arrow using SVG as background */
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  outline: none;
+  box-shadow: 0 0 0 2px #444444;
+}
+
+/* Styling for action buttons like Edit/Delete */
+.action-btn {
+  background-color: #ff0033;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+/* Hover effect for action buttons */
+.action-btn:hover {
+  background-color: #ff1a4b;
+}
+
+/* Modal (confirmation/edit) background styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Modal content box styling */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* Container for modal buttons */
+.modal-buttons {
+  margin-top: 20px;
+}
+
+/* Buttons inside modal */
+.modal-buttons button {
+  padding: 10px 16px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Confirm delete button */
+#confirmDelete {
+  background-color: #ff0033;
+  color: white;
+}
+
+/* Cancel delete button */
+#cancelDelete {
+  background-color: #444444;
+  color: white;
+}
+
+/* Input/select styling inside edit modal */
+#editModal input,
+#editModal select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+/* Edit modal heading */
+#editModal h3 {
+  margin-bottom: 10px;
+}
+
+/* Edit modal button styles */
+#editModal .modal-buttons button {
+  padding: 10px 16px;
+  margin: 10px 8px 0;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Save button in edit modal */
+#saveEdit {
+  background-color: #ff0033;
+  color: white;
+}
+
+/* Cancel button in edit modal */
+#cancelEdit {
+  background-color: #444444;
+  color: white;
+}
+
+/* Prevent text from wrapping in last column */
+table td:last-child {
+  white-space: nowrap;
+}
+
+/* Action buttons in last column are inline and spaced */
+table td:last-child .action-btn {
+  display: inline-block;
+  margin: 4px;
+}
+
+/* ----------- Responsive Styles Below ------------ */
+
+/* Screens up to 1440px wide */
+@media (max-width: 1440px) {
+  table th, table td {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+/* Screens up to 1024px (e.g. small laptops) */
+@media (max-width: 1024px) {
+  table th, table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .action-btn {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 18px;
+  }
+}
+
+/* Phones and very small tablets */
+@media (max-width: 767px) {
+  table {
+    display: block;
+    overflow-x: auto; /* Allow horizontal scroll */
+    width: 100%;
+  }
+
+  table th, table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .action-btn {
+    font-size: 12px;
+    padding: 6px 9px;
+  }
+
+  .modal-content {
+    width: 95%;
+    font-size: 14px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  table th, table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .action-btn {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .modal-content {
+    width: 95%;
+    font-size: 13px;
+    padding: 16px;
+  }
+
+  #editModal input,
+  #editModal select {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
+
+/* Medium devices like tablets (768px–1024px) — includes horizontal scroll */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  table {
+    display: block;
+    overflow-x: auto; /* Enable scroll for wider tables */
+    white-space: nowrap;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .action-btn {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  #editModal input,
+  #editModal select {
+    font-size: 13px;
+    padding: 9px;
+  }
+}

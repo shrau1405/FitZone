@@ -1,0 +1,78 @@
+/* Base styles for body */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #1c1c1c; /* Dark background */
+  color: #fff0f0; /* Light text color */
+}
+
+/* Container for the entire store section */
+.store-container {
+  max-width: 1300px;
+  margin: 40px auto; /* Centered with vertical spacing */
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Heading style inside .container */
+.container h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Layout for the product grid */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  gap: 30px; /* Space between product cards */
+}
+
+/* Each product card design */
+.product-card {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  color: #fff0f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect to slightly lift the card */
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Product image styling */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* Keeps image inside without cropping */
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* Product title */
+.product-card h3 {
+  font-size: 1.3em;
+  margin: 10px 0 8px;
+  color: #ffffff;
+}
+
+/* Product description or offer text */
+.product-card p {
+  font-size: 0.95em;
+  margin: 5px 0;
+  color: #ccc; /* Light grey for contrast */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .product-card {
+    width: 90%; /* Full-width on small screens */
+  }
+}

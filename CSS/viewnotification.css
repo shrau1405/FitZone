@@ -1,0 +1,106 @@
+/* Import shared admin layout */
+@import url('admin.css');
+
+/* =================== MAIN CONTAINER =================== */
+.container {
+  background-color: #222;
+  padding: 40px 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =================== HEADINGS =================== */
+.container h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* =================== TABLE BASE STYLING =================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* =================== TABLE HEADER STYLING =================== */
+th {
+  background-color: #ff0033;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =================== ZEBRA STRIPING + HOVER =================== */
+tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+tr:hover {
+  background-color: #3a3a3a;
+}
+
+/* =================== RESPONSIVE =================== */
+
+/* ==== Prevent full page scroll on overflow ==== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =================== MEDIA QUERIES =================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .container h2 {
+    font-size: 20px;
+  }
+
+  th, td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

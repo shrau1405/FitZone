@@ -1,0 +1,183 @@
+/* Reset default browser styles for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global font and background settings for body */
+body {
+  font-family: 'Poppins', sans-serif; /* Modern readable font */
+  background-color: #181818; /* Dark background for contrast */
+  color: #eeeeee; /* Light text for readability */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure footer stays at bottom */
+}
+
+/* ----- Header Section ----- */
+header {
+  display: flex;
+  justify-content: space-between; /* Space between left, center, right sections */
+  align-items: center;
+  background-color: #ff0033; /* Vibrant red header */
+  color: white;
+  padding: 15px 25px;
+  flex-wrap: wrap; /* Wrap in smaller screens */
+}
+
+/* Left side of header: logo + site name */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and site name */
+}
+
+/* Logo image inside header */
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+/* Website name next to logo */
+.site-name {
+  font-family: 'Bebas Neue', cursive; /* Bold, attention-grabbing font */
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Center portion of header: tagline */
+.header-center {
+  text-align: center;
+  flex: 1; /* Takes available space */
+}
+
+/* Tagline styling */
+.tagline {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 28px;
+  font-style: italic;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+/* Right side of header: social icons */
+.header-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* Make icons clickable */
+.header-right i {
+  cursor: pointer;
+}
+
+/* Separator styling between icons */
+.header-right span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* ----- Main Content Area ----- */
+main {
+  flex: 1; /* Takes up remaining vertical space */
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Group of dashboard buttons */
+.button-group {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between buttons */
+}
+
+/* Individual dashboard buttons */
+.button-group button {
+  background-color: #ff0033;
+  color: white;
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  width: 100%;
+}
+
+/* Hover effect for buttons */
+.button-group button:hover {
+  background-color: #ff1a4b; /* Slightly lighter red */
+}
+
+/* ----- Footer Section ----- */
+footer {
+  background-color: #cf0e35; /* Deep red footer */
+  color: #fff0f0;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Footer content container */
+.footer-content {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Individual footer sections */
+.about, .why-choose-us, .office {
+  flex: 1 1 300px; /* Responsive column sizing */
+}
+
+/* Footer section titles */
+.footer-content h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* Footer section text */
+.footer-content p {
+  font-size: 16px;
+  line-height: 1.6; /* Improves readability */
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button-group button {
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Apply delays correctly through <a> parents */
+.button-group a:nth-child(1) button { animation-delay: 0.1s; }
+.button-group a:nth-child(2) button { animation-delay: 0.3s; }
+.button-group a:nth-child(3) button { animation-delay: 0.5s; }
+.button-group a:nth-child(4) button { animation-delay: 0.7s; }
+.button-group a:nth-child(5) button { animation-delay: 0.9s; }
+.button-group a:nth-child(6) button { animation-delay: 1.1s; }
+.button-group a:nth-child(7) button { animation-delay: 1.3s; }
+.button-group a:nth-child(8) button { animation-delay: 1.5s; }
+.button-group a:nth-child(9) button { animation-delay: 1.7s; }
+.button-group a:nth-child(10) button { animation-delay: 1.9s; }
+.button-group a:nth-child(11) button { animation-delay: 2.1s; }

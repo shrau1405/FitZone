@@ -1,0 +1,209 @@
+/* Importing shared admin styles */
+@import url('admin.css');
+
+/* Main container styling for the bill viewing section */
+.container {
+  background-color: #222222; /* Dark background for contrast */
+  padding: 40px 20px;  /* Top/Bottom padding = 40px, Left/Right = 20px for spacing */
+  border-radius: 12px; /* Rounded corners */
+  width: 100%; /* Full width of parent */
+  max-width: 1200px;  /* Limits container width on large screens */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Subtle outer shadow */
+  color: #fff; /* White text color */
+}
+
+/* Page title inside the container */
+.container h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 30px; /* Space below title */
+  font-size: 28px;
+}
+
+/* Styling for the search bar container */
+.search-section {
+  display: flex;
+  justify-content: center; /* Centering the search bar */
+  margin-bottom: 20px; /* Gap below search bar */
+}
+
+/* Input field styling for the search bar */
+.search-section input {
+  padding: 12px 15px;
+  border-radius: 6px;
+  background-color: #333; /* Dark input field background */
+  border: none;
+  color: white;
+  font-size: 15px;
+  width: 250px;
+}
+
+/* Main table layout for displaying bills */
+#billTable {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapses borders */
+  margin-top: 10px;
+}
+
+/* General table cell and header cell styling */
+#billTable th, #billTable td {
+  border: 1px solid #444; /* Dark gray borders */
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Table header row styling */
+#billTable th {
+  background-color: #ff0033; /* Bright red background */
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Zebra striping for even rows */
+#billTable tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+/* Row hover effect */
+#billTable tr:hover {
+  background-color: #3a3a3a;
+}
+
+/* Style for the "View" button */
+.view-btn {
+  background-color: #ff0033;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hover effect for "View" button */
+.view-btn:hover {
+  background-color: #ff1a4b;
+}
+
+/* Style for the "Delete" button */
+.delete-btn {
+  background-color: #ff0033;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 8px; /* Space between View and Delete buttons */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for "Delete" button */
+.delete-btn:hover {
+  background-color: #cc002a; /* Slightly darker red on hover */
+}
+
+/* Container for grouping buttons together */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Space between buttons */
+}
+
+/* --- Responsive Design Media Queries --- */
+
+/* Adjustments for screens up to 1440px wide */
+@media (max-width: 1440px) {
+  #billTable th, #billTable td {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* Adjustments for Medium Screens (Tablets, 768px – 1024px) */
+@media (max-width: 1024px) {
+  #billTable th, #billTable td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .view-btn, .delete-btn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .btn-group {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+/* Adjustments for Small Screens (Phones, 481px – 767px) */
+@media (max-width: 767px) {
+  #billTable {
+    display: block; /* Enable horizontal scroll */
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  #billTable th, #billTable td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .view-btn, .delete-btn {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Extra small screens (less than 480px) */
+@media (max-width: 480px) {
+  #billTable th, #billTable td {
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  .view-btn, .delete-btn {
+    padding: 5px 7px;
+    font-size: 11px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+/* Explicit fix for tablets (768px – 1024px): horizontal scroll */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #billTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevent table from wrapping */
+  }
+
+  #billTable th,
+  #billTable td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .view-btn,
+  .delete-btn {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+}
+

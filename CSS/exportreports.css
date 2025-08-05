@@ -1,0 +1,100 @@
+/* Importing Google Fonts: Bebas Neue and Poppins (light, regular, semi-bold) */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap');
+
+/* Base styles for the body */
+body {
+  margin: 0; /* Remove default body margin */
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  background-color: #1c1c1c; /* Dark background for modern look */
+  color: #fff0f0; /* Light text color for readability */
+}
+
+/* Container for page content */
+.container {
+  width: 95%; /* Responsive width */
+  max-width: 1400px; /* Prevent container from stretching too wide on large screens */
+  margin: 40px auto; /* Center the container vertically and horizontally */
+  padding: 20px; /* Inner spacing */
+  background-color: #222; /* Slightly lighter dark shade for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Subtle shadow for depth */
+}
+
+/* Heading inside the container */
+.container h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  text-align: center; /* Center the heading */
+}
+
+/* Filter section containing dropdown and search input */
+.filters {
+  display: flex;
+  justify-content: center; /* Center filters horizontally */
+  align-items: center;
+  gap: 20px; /* Space between filter items */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+/* Style for both select dropdown and input field */
+.filters select,
+.filters input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none; /* Remove default borders */
+  font-size: 15px;
+  background-color: #333; /* Dark input background */
+  color: white; /* White text */
+  min-width: 250px; /* Minimum size for consistency */
+  max-width: 300px;
+  flex: 1; /* Flexible width to adapt with screen */
+}
+
+/* Enables horizontal scroll if table overflows */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Base table styles */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove space between borders */
+  margin-top: 10px;
+}
+
+/* Table header and cell styles */
+th, td {
+  padding: 12px;
+  text-align: center; /* Centered text in cells */
+  border: 1px solid #444; /* Dark border color */
+}
+
+/* Table header row */
+th {
+  background-color: #ff0033; /* Bright red background for headers */
+  font-weight: 600;
+  color: #fff0f0; /* Light text on red background */
+}
+
+/* Alternate row coloring for readability */
+tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+/* Styling for action buttons (like export or download) */
+.action-btn {
+  background-color: #ff0033;
+  color: #fff0f0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+.action-btn:hover {
+  background-color: #e6002c; /* Slightly darker red on hover */
+}

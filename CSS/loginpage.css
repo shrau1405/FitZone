@@ -1,0 +1,89 @@
+@import url('admin.css'); /* Import shared admin styles across all pages */
+
+/* Login container */
+.login-container {
+  background-color: #222222; /* Dark background for contrast */
+  padding: 40px 35px; /* Internal spacing */
+  border-radius: 12px; /* Rounded corners */
+  width: 100%; /* Responsive width */
+  max-width: 460px; /* Maximum width to maintain form readability */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Slight outer shadow for elevation */
+  text-align: center; /* Center align the content inside */
+}
+
+/* Heading */
+.login-container h2 {
+  font-family: 'Poppins', sans-serif; /* Font for uniformity */
+  font-size: 24px; /* Large, clear heading */
+  margin-bottom: 25px; /* Space below heading */
+  color: #ffffff; /* White text for contrast on dark background */
+}
+
+/* Labels */
+form label {
+  display: block; /* Makes each label appear on its own line */
+  text-align: left; /* Align label text to the left for better readability */
+  margin-bottom: 6px; /* Space below each label */
+  font-size: 14px; /* Moderate font size */
+  color: #ffffff; /* White color on dark background */
+  font-weight: 400; /* Regular font weight */
+}
+
+/* Inputs & Dropdown */
+form input,
+form select {
+  width: 100%; /* Full width of container */
+  padding: 12px 14px; /* Inner spacing for better usability */
+  margin-bottom: 20px; /* Space below each input */
+  border: none; /* No default border */
+  border-radius: 6px; /* Rounded corners for modern look */
+  background-color: #333333; /* Slightly lighter than background */
+  color: #ffffff; /* Text inside inputs is white */
+  font-size: 16px; /* Easily readable input text */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+  outline: none; /* Remove default outline */
+  box-shadow: none; /* Prevent any browser-added shadow */
+}
+
+/* Remove red outlines even on focus */
+form input:focus,
+form select:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px #444444; /* Subtle outline on focus */
+  border: none; /* Keep border removed */
+}
+
+/* Custom dropdown arrow fix */
+form select {
+  appearance: none; /* Remove default OS styling for dropdown */
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Custom white arrow */
+  background-repeat: no-repeat; /* Don't repeat the arrow image */
+  background-position: right 12px center; /* Place arrow to the right */
+  background-size: 16px; /* Scale arrow to proper size */
+  padding-right: 40px; /* Space for arrow */
+}
+
+/* Login Button - match 'Assign Fee Package' style */
+form button {
+  background-color: #ff0033; /* Primary red color */
+  color: white; /* White button text */
+  border: none; /* No border */
+  padding: 14px; /* Button height */
+  width: 100%; /* Full width button */
+  font-size: 18px; /* Large text */
+  font-weight: bold; /* Bold for emphasis */
+  border-radius: 8px; /* Rounded button */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+form button:hover {
+  background-color: #ff1a4b; /* Slightly lighter red on hover */
+}
+
+/* Error Message */
+.error-msg {
+  color: #ff9999; /* Light red error text */
+  margin-top: 10px; /* Space above error message */
+  font-size: 14px; /* Smaller font to differentiate from form text */
+}

@@ -1,0 +1,148 @@
+@import url('admin.css'); /* Import shared admin styling */
+
+/* =============================
+   Main Container Styling
+============================= */
+.assignpackage-container {
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Stack children vertically */
+  gap: 40px; /* Space between children */
+  padding: 40px 20px; /* Outer spacing around the container */
+  align-items: center; /* Center items horizontally */
+}
+
+/* =============================
+   Heading Styling
+============================= */
+.assignpackage-container h2 {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-size: 24px; /* Heading size */
+  color: #ffffff; /* White text */
+  margin-bottom: 25px; /* Space below heading */
+  text-align: center; /* Center the heading text */
+}
+
+/* =============================
+   Fee Packages Table Container
+============================= */
+.assign-table-container {
+  background-color: #222222; /* Dark background */
+  padding: 35px; /* Inner spacing */
+  border-radius: 12px; /* Rounded corners */
+  width: 100%; /* Take full width of container */
+  max-width: 1200px; /* Restrict max width for large screens */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+}
+
+/* =============================
+   Table Styling
+============================= */
+.assign-table-container table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Merge borders */
+  background-color: #333333; /* Darker table background */
+  color: #ffffff; /* White text */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Table cell and header styling */
+.assign-table-container table th,
+.assign-table-container table td {
+  padding: 12px 14px; /* Cell spacing */
+  border: 1px solid #444444; /* Border around cells */
+  text-align: center; /* Center-align cell content */
+}
+
+.assign-table-container table th {
+  background-color: #ff0033; /* Red background for headers */
+  font-weight: 600; /* Bolder header text */
+}
+
+/* =============================
+   Assign Package Form Container
+============================= */
+.assign-form-container {
+  background-color: #222222; /* Dark background for form box */
+  padding: 40px 35px; /* Inner spacing */
+  border-radius: 12px; /* Rounded corners */
+  width: 100%; /* Full width inside parent */
+  max-width: 700px; /* Restrict max width */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Box shadow */
+  text-align: center; /* Center align content */
+}
+
+/* =============================
+   Label Styling
+============================= */
+.assign-form-container form label {
+  display: block; /* Show each label on a new line */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 6px; /* Space below label */
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =============================
+   Input & Select Styling
+============================= */
+.assign-form-container form input,
+.assign-form-container form select {
+  width: 100%; /* Full width of parent container */
+  padding: 12px 14px; /* Inner padding */
+  margin-bottom: 20px; /* Space between fields */
+  border: none; /* Remove default borders */
+  border-radius: 6px; /* Slightly rounded */
+  background-color: #333333; /* Input background */
+  color: #ffffff; /* White text */
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  outline: none; /* Remove outline on focus */
+}
+
+/* Focus effect for input/select */
+.assign-form-container form input:focus,
+.assign-form-container form select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #444444; /* Highlighted ring */
+}
+
+/* Dropdown arrow for select field */
+.assign-form-container form select {
+  appearance: none; /* Remove default styling */
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Downward arrow */
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* Position arrow at right */
+  background-size: 16px; /* Arrow size */
+  padding-right: 40px; /* Add space for arrow */
+}
+
+/* =============================
+   Submit Button Styling
+============================= */
+.assign-form-container form button {
+  background-color: #ff0033; /* Red button */
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.assign-form-container form button:hover {
+  background-color: #ff1a4b; /* Slightly brighter on hover */
+}
+
+/* =============================
+   Success Message Styling
+============================= */
+.success-msg {
+  color: #00cc66; /* Green text */
+  font-size: 14px;
+  margin-top: 12px;
+}

@@ -1,0 +1,103 @@
+/* Import the common admin styling used across all pages */
+@import url('admin.css');
+
+/* Main container that wraps the content of the page */
+.container {
+  background-color: #222222;           /* Dark background for contrast */
+  padding: 40px 25px;                  /* Space inside the container */
+  border-radius: 12px;                 /* Rounded corners for smoother UI */
+  width: 100%;                         /* Full width of the parent */
+  max-width: 1200px;                   /* Limits maximum width for readability */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for elevation */
+  color: #fff;                         /* White text for contrast on dark bg */
+}
+
+/* Heading style inside the container */
+.container h2 {
+  text-align: center;                  /* Center aligned text */
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  margin-bottom: 30px;                /* Space below heading */
+  font-size: 28px;                     /* Larger font size for visibility */
+}
+
+/* Wrapper for dropdown filter and search input */
+.filters {
+  display: flex;                       /* Display side-by-side */
+  justify-content: center;            /* Centered horizontally */
+  gap: 15px;                           /* Space between the filter elements */
+  margin-bottom: 20px;                /* Space below filters */
+}
+
+/* Styling for both the select dropdown and input box */
+.filters select,
+.filters input {
+  padding: 12px 15px;                 /* Inner spacing */
+  border-radius: 6px;                 /* Rounded corners */
+  background-color: #333;             /* Dark background for input fields */
+  border: none;                       /* No border */
+  color: white;                       /* White text */
+  font-size: 15px;                    /* Medium-sized text */
+  width: 230px;                       /* Fixed width for input fields */
+  appearance: none;                   /* Remove default OS styles (especially on select) */
+
+  /* Add custom dropdown arrow for select fields */
+  background-image: url('https://img.icons8.com/ios-filled/10/ffffff/expand-arrow.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+/* Wrapper that enables horizontal scrolling on small screens */
+.table-wrapper {
+  overflow-x: auto;                   /* Allows horizontal scroll if table is too wide */
+}
+
+/* User table styles */
+#userTable {
+  width: 100%;                        /* Full width */
+  border-collapse: collapse;         /* Merges table cell borders */
+  margin-top: 10px;                  /* Space above the table */
+}
+
+/* Table cell and header shared styling */
+#userTable th,
+#userTable td {
+  border: 1px solid #444;            /* Dark borders */
+  padding: 14px;                     /* Space inside cells */
+  text-align: center;                /* Center aligned text */
+  font-size: 15px;                   /* Consistent font size */
+}
+
+/* Header row styling */
+#userTable th {
+  background-color: #ff0033;         /* Bright red background */
+  color: white;                      /* White text */
+  font-family: 'Poppins', sans-serif; /* Clean heading font */
+}
+
+/* Zebra-striping every even row */
+#userTable tr:nth-child(even) {
+  background-color: #2c2c2c;         /* Slightly different dark color */
+}
+
+/* Row highlight on hover */
+#userTable tr:hover {
+  background-color: #3a3a3a;         /* Lighten row when mouse hovers */
+}
+
+/* Styling for action buttons like "Download PDF" */
+.action-btn {
+  background-color: #ff0033;         /* Same red as table header */
+  color: white;                      /* White text */
+  padding: 8px 12px;                 /* Padding inside button */
+  border: none;                      /* No border */
+  border-radius: 5px;                /* Slightly rounded corners */
+  font-size: 14px;                   /* Button text size */
+  cursor: pointer;                   /* Show pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for action buttons */
+.action-btn:hover {
+  background-color: #ff1a4b;         /* Slightly lighter red on hover */
+}

@@ -1,0 +1,93 @@
+/* Import shared admin styles */
+@import url('admin.css');
+
+/* Container for the Generate Bill form */
+.generate-container {
+  background-color: #222222;       /* Dark background for contrast */
+  padding: 40px 35px;              /* Space inside the box */
+  border-radius: 12px;             /* Rounded corners */
+  width: 100%;                     /* Full width up to max */
+  max-width: 600px;                /* Max width for centered layout */
+  margin: 30px auto;               /* Center horizontally with vertical spacing */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  text-align: center;              /* Center-align content inside */
+}
+
+/* Styling for dropdown/select input */
+.generate-container select {
+  width: 100%;                     /* Full width */
+  padding: 12px 14px;              /* Inner spacing */
+  margin-bottom: 20px;             /* Space below */
+  border: none;                    /* Remove default border */
+  border-radius: 6px;              /* Rounded corners */
+  background-color: #333333;       /* Darker input box */
+  color: #ffffff;                  /* White text */
+  font-size: 16px;                 /* Readable text size */
+  font-family: 'Poppins', sans-serif;
+  outline: none;                   /* Remove blue outline on focus */
+  appearance: none;                /* Remove default arrow in some browsers */
+}
+
+/* Focus style for select box */
+.generate-container select:focus {
+  box-shadow: 0 0 0 2px #444444;   /* Custom border glow on focus */
+}
+
+/* Heading style */
+.generate-container h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #ffffff;                  /* White heading text */
+}
+
+/* Label styling for form fields */
+.generate-container label {
+  display: block;                  /* Forces label on its own line */
+  text-align: left;                /* Align left even in center-aligned form */
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Input and button styling (shared) */
+.generate-container input,
+.generate-container button {
+  width: 100%;                     /* Full width for consistency */
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333333;       /* Dark background for inputs */
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+}
+
+/* Input focus style */
+.generate-container input:focus {
+  box-shadow: 0 0 0 2px #444444;   /* Highlight focused input */
+}
+
+/* Button-specific styles */
+.generate-container button {
+  background-color: #ff0033;       /* Primary red */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for button */
+.generate-container button:hover {
+  background-color: #ff1a4b;       /* Slightly lighter red on hover */
+}
+
+/* Error message text style */
+.error-msg {
+  color: #ff9999;                  /* Light red error message */
+  font-size: 14px;
+  height: 18px;                    /* Fixed height for layout stability */
+}

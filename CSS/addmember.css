@@ -1,0 +1,89 @@
+/* Importing global admin styles */
+@import url('admin.css');
+
+/* Main container for the Add Member form */
+.addmember-container {
+  background-color: #222222; /* Dark background for modern look */
+  padding: 40px 35px; /* Space inside the container */
+  border-radius: 12px; /* Rounded corners */
+  width: 100%; /* Responsive width */
+  max-width: 700px;  /* Max width of form container on larger screens */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Subtle outer shadow */
+  text-align: center; /* Center align content inside */
+}
+
+/* Style for the heading of the Add Member form */
+.addmember-container h2 {
+  font-family: 'Poppins', sans-serif; /* Clean sans-serif font */
+  font-size: 24px; /* Medium-large heading */
+  margin-bottom: 25px; /* Spacing below heading */
+  color: #ffffff; /* White text */
+}
+
+/* Style for all form labels */
+form label {
+  display: block; /* Each label on its own line */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 6px; /* Space below each label */
+  font-size: 14px; /* Smaller font size for labels */
+  color: #ffffff; /* White text */
+  font-weight: 400; /* Regular font weight */
+}
+
+/* Common style for input fields and dropdowns */
+form input,
+form select {
+  width: 100%; /* Full width */
+  padding: 12px 14px; /* Internal spacing */
+  margin-bottom: 20px; /* Space between fields */
+  border: none; /* No border */
+  border-radius: 6px; /* Slightly rounded corners */
+  background-color: #333333; /* Darker input background */
+  color: #ffffff; /* White text inside fields */
+  font-size: 16px; /* Comfortable text size */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+  outline: none; /* Remove browser outline */
+}
+
+/* Remove red outline when field is focused */
+form input:focus,
+form select:focus {
+  outline: none; /* No default browser outline */
+  box-shadow: 0 0 0 2px #444444; /* Subtle highlight when focused */
+}
+
+/* Style to customize default dropdown arrow in select */
+form select {
+  appearance: none; /* Remove system default styling */
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; /* No repeat of the arrow icon */
+  background-position: right 12px center; /* Position arrow to the right */
+  background-size: 16px; /* Size of arrow icon */
+  padding-right: 40px; /* Extra padding to prevent text overlap with arrow */
+}
+
+/* Submit button styles */
+form button {
+  background-color: #ff0033; /* Red button background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 14px; /* Vertical padding */
+  width: 100%; /* Full-width button */
+  font-size: 18px; /* Slightly larger text */
+  font-weight: bold; /* Bold text */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover state for submit button */
+form button:hover {
+  background-color: #ff1a4b; /* Slightly lighter red on hover */
+}
+
+/* Error message style below the form */
+.error-msg {
+  color: #ff9999; /* Soft red for error */
+  margin-top: 10px; /* Space above the error */
+  font-size: 14px; /* Small font for message */
+}

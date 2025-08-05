@@ -1,0 +1,592 @@
+/* Subheader navigation bar styles */
+.subheader {
+  background-color: #ff0033; /* Red background */
+  display: flex; /* Layout children in a row */
+  justify-content: center; /* Center the links */
+  flex-wrap: wrap; /* Wrap links on smaller screens */
+  padding: 10px 20px; /* Inner spacing */
+  gap: 20px; /* Space between links */
+  font-family: 'Poppins', sans-serif; /* Font style */
+}
+
+/* Subheader link styles */
+.subheader a {
+  color: white; /* Link text color */
+  text-decoration: none; /* No underline */
+  font-weight: bold; /* Bold font */
+  font-size: 18px; /* Text size */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect on subheader links */
+.subheader a:hover {
+  color: #ffd5dd; /* Light pink color on hover */
+}
+
+/* Main tag override to give spacing and block display */
+main {
+  display: block; /* Stack all section elements vertically */
+  padding: 40px 20px; /* Spacing around content */
+}
+
+/* Section styles inside main */
+main section {
+  padding: 80px 20px; /* Top and bottom padding */
+  max-width: 1000px; /* Maximum width */
+  margin: auto; /* Center align horizontally */
+  text-align: center; /* Center content text */
+}
+
+/* Section heading styling */
+main section h2 {
+  font-size: 32px; /* Larger font size */
+  margin-bottom: 20px; /* Space below heading */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+}
+
+/* Paragraph and list styles in section */
+main section p, main section ul {
+  font-size: 18px; /* Medium text */
+  line-height: 1.6; /* Readable spacing between lines */
+}
+
+/* Remove default bullets and padding for ul */
+main section ul {
+  list-style: none; /* No bullets */
+  padding: 0; /* No left padding */
+}
+
+/* Icon before each list item */
+main section ul li::before {
+  content: "🏋️ "; /* Dumbbell emoji before list item */
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Call-to-action button styles */
+.cta-btn {
+  background-color: #ff0033; /* Red background */
+  color: white; /* White text */
+  padding: 14px 30px; /* Button padding */
+  font-size: 18px; /* Font size */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover */
+  text-decoration: none; /* No underline for buttons as links */
+}
+
+/* Hover state for CTA button */
+.cta-btn:hover {
+  background-color: #ff1a4b; /* Lighter red shade */
+}
+
+/* About section styling */
+#about {
+  padding: 80px 60px; /* Padding around the section */
+  background-color: #1f1f1f; /* Dark background */
+}
+
+/* Heading for the About section */
+#about h2 {
+  text-align: center; /* Center heading */
+  margin-bottom: 40px; /* Spacing below heading */
+  font-family: 'Poppins', sans-serif; /* Font */
+  font-size: 32px; /* Font size */
+  color: #ffffff; /* White color */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Soft shadow */
+}
+
+/* Grid layout for About timeline boxes */
+.timeline-grid {
+  display: flex; /* Flex layout */
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  gap: 40px; /* Gap between timeline boxes */
+  justify-content: space-between; /* Space between boxes */
+  max-width: 1200px; /* Max width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Individual timeline box styling */
+.timeline-box {
+  background-color: #ff0033; /* Red background */
+  color: #ffffff; /* White text */
+  flex: 1 1 45%; /* Responsive width (min 45%) */
+  padding: 30px; /* Padding inside box */
+  border-radius: 10px; /* Rounded edges */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4); /* Drop shadow */
+  font-family: 'Poppins', sans-serif; /* Font */
+}
+
+/* Heading inside each timeline box */
+.timeline-box h3 {
+  font-size: 22px; /* Medium heading size */
+  margin-bottom: 10px; /* Space below heading */
+  color: #ffffff; /* White text */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Soft shadow */
+}
+
+/* Paragraphs inside timeline box */
+.timeline-box p {
+  font-size: 16px; /* Standard paragraph size */
+  line-height: 1.6; /* Line spacing */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4); /* Slight text shadow */
+}
+
+/* Facilities section styles */
+#facilities {
+  padding: 60px 30px; /* Top and bottom padding */
+  max-width: 100%; /* Full width section */
+  margin: 0; /* Remove any outer margin */
+}
+
+/* Grid container for facility cards */
+.facility-grid {
+  display: grid; /* CSS grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  width: 100%; /* Full width */
+  gap: 20px; /* Gap between cards */
+  padding: 0; /* No inner padding */
+  margin: 0; /* No outer margin */
+}
+
+/* Outer wrapper of a flip card */
+.flip-card {
+  height: 250px; /* Fixed height */
+  perspective: 1000px; /* Creates 3D space for flip effect */
+  box-sizing: border-box; /* Includes padding/border in size */
+}
+
+/* Inner container which rotates */
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s; /* Smooth flip animation */
+  transform-style: preserve-3d; /* Preserve 3D during rotation */
+  position: relative; /* For absolute children */
+}
+
+/* Flip effect on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Rotates on Y axis */
+}
+
+/* Front and back face of the flip card */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back when front is visible */
+  background-color: #ff0033; /* Red background */
+  color: white; /* White text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3); /* Inner shadow */
+}
+
+/* Heading inside the front of the flip card */
+.flip-card-front h3 {
+  font-size: 25px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle glow */
+}
+
+/* Back face of the flip card */
+.flip-card-back {
+  transform: rotateY(180deg); /* Rotated version of front */
+  font-size: 16px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Text glow */
+}
+
+
+/* ================================
+   Competitions Section Styling
+   ================================ */
+
+/* Heading for Competitions Section */
+#competitions h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* adds depth to heading */
+}
+
+/* Gallery container for competition images */
+.competition-gallery {
+  display: flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-wrap: wrap; /* allows items to wrap to next line */
+}
+
+/* Second row spacing */
+.competition-gallery.second-row {
+  margin-top: 30px;
+  justify-content: center;
+}
+
+/* Card container for each competition image */
+.competition-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* soft shadow around card */
+}
+
+/* Image styling inside competition card */
+.competition-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* zoom effect on hover */
+}
+
+/* Zoom effect on hover */
+.competition-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay that appears on hover */
+.competition-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65); /* dark overlay */
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Show overlay on hover */
+.competition-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Title inside overlay */
+.competition-card .overlay h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Description inside overlay */
+.competition-card .overlay p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Section padding and full width */
+#competitions {
+  padding: 60px 30; /* remove side padding */
+  max-width: 100%;
+  margin: 0;
+}
+
+/* ================================
+   Activities Section Styling
+   ================================ */
+
+/* Section container */
+#activities {
+  padding: 80px 30px;
+  text-align: center;
+  background-color: #181818;
+}
+
+/* Heading for Activities */
+#activities h2 {
+  font-size: 36px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+/* Layout for activity cards */
+.activity-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+/* Each activity card styling */
+.activity-card {
+  background-color: #ff0033;
+  color: #fff;
+  flex: 1 1 280px;
+  max-width: 320px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Hover lift effect */
+.activity-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Icon inside card */
+.activity-card i {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Activity title */
+.activity-card h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Activity description */
+.activity-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ================================
+   Photos Section (Masonry Grid)
+   ================================ */
+
+/* Section container */
+#photos {
+  padding: 30px 20px;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Heading */
+#photos h2 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Masonry-style gallery */
+.masonry-gallery {
+  column-count: 3;
+  column-gap: 15px;
+  width: 100%;
+}
+
+/* Gallery images */
+.masonry-gallery img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover zoom and shadow */
+.masonry-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive column count */
+@media screen and (max-width: 1024px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+
+/* ================================
+   Reviews Section
+   ================================ */
+
+/* Section container */
+#reviews {
+  padding: 80px 40px;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+/* Heading */
+#reviews h2 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Review layout */
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Each review box */
+.review-card {
+  flex: 1 1 calc(33% - 30px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  min-width: 280px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.review-card:hover {
+  transform: scale(1.03);
+}
+
+/* Review text */
+.review-card p {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* Star icons */
+.review-card .stars {
+  color: #ff0033;
+  font-size: 28px;
+  margin-bottom: 10px;
+  border: #fff;
+}
+
+/* Reviewer name */
+.review-card h4 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ================================
+   Responsive Fixes
+   ================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .facility-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .reviews-container {
+    justify-content: center;
+  }
+
+  .review-card {
+    flex: 1 1 calc(50% - 30px);
+  }
+
+  footer {
+    padding: 40px 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .about, .why-choose-us, .office {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .facility-grid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  .review-card {
+    flex: 1 1 100%;
+  }
+
+  #reviews {
+    padding: 60px 20px;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+
+  .footer-content {
+    gap: 25px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .flip-card {
+    height: 220px;
+  }
+
+  .flip-card-front h3 {
+    font-size: 22px;
+  }
+
+  .flip-card-back {
+    font-size: 14px;
+  }
+
+  .review-card p {
+    font-size: 15px;
+  }
+
+  .review-card .stars {
+    font-size: 24px;
+  }
+
+  .footer-content h3 {
+    font-size: 18px;
+  }
+
+  .footer-content p {
+    font-size: 14px;
+  }
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+
