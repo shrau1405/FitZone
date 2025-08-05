@@ -1,0 +1,124 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Sets language to English -->
+<head>
+  <meta charset="UTF-8"/> <!-- Character encoding for proper text display -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Makes page responsive on all devices -->
+  <title>Generate Bill - FitZone</title> <!-- Title shown in browser tab -->
+
+  <!-- Linking external CSS files -->
+  <link rel="stylesheet" href="../CSS/admin.css" /> <!-- Shared admin styling -->
+  <link rel="stylesheet" href="../CSS/generatebill.css" /> <!-- Page-specific styling -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Optimizes font loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/> <!-- Font families used -->
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-left">
+      <!-- Gym logo icon -->
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" alt="FitZone Logo" class="logo"/>
+      <span class="site-name">FitZone</span> <!-- Site name text -->
+    </div>
+
+    <div class="header-center">
+      <!-- Tagline in center -->
+      <span class="tagline">Power Through Progress</span>
+    </div>
+
+    <div class="header-right">
+      <!-- Social media icons with separators -->
+      <i class="fab fa-facebook-f"></i><span>|</span>
+      <i class="fab fa-instagram"></i><span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- Main content section for bill generation -->
+  <main>
+    <div class="generate-container">
+      <h2>Generate Member Bill</h2>
+      <!-- Form to generate bill -->
+      <form id="billForm">
+        <!-- Member name input with suggestion list -->
+        <label for="memberName">Member Name</label>
+        <input type="text" id="memberName" list="memberNames" required />
+        <datalist id="memberNames"></datalist> <!-- Autocomplete for names -->
+
+        <!-- Auto-filled read-only fields based on selected name -->
+        <label for="memberID">Member ID</label>
+        <input type="text" id="memberID" readonly />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" readonly />
+
+        <label for="plan">Plan</label>
+        <input type="text" id="plan" readonly />
+
+        <label for="amount">Amount (₹)</label>
+        <input type="number" id="amount" readonly />
+
+        <!-- User selects the plan start date -->
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate" required />
+
+        <!-- End date auto-calculated from start date -->
+        <label for="endDate">End Date</label>
+        <input type="date" id="endDate" readonly />
+
+        <!-- Button to generate the bill -->
+        <button type="submit">Generate Bill</button>
+
+        <!-- Area to show confirmation or success message -->
+        <p id="message" class="success-msg"></p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer section with about, features, and contact -->
+  <footer>
+    <div class="footer-content">
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>
+          FitZone is your destination for strength, stamina, and transformation.
+          From expert guidance to advanced facilities, we help you redefine your fitness journey.
+        </p>
+      </div>
+
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br>
+          ✔ Personalized Workouts<br>
+          ✔ Flexible Memberships<br>
+          ✔ 24/7 Support<br>
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91-9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDKs for Firebase functionality (auth, firestore) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+  <!-- Firebase project configuration and custom script -->
+  <script src="../JS/firebase-config.js"></script> <!-- Firebase config setup -->
+  <script type="module" src="../JS/generatebill.js"></script> <!-- JS logic to generate bill -->
+    <script type="module" src="../JS/logger.js"></script>
+</body>
+</html>

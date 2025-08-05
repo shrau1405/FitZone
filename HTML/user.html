@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set character encoding and page title -->
+  <meta charset="UTF-8" />
+  <title>User Dashboard - FitZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome icons for social media and UI icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- Google Fonts: Bebas Neue for headings, Poppins for general text -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS stylesheets: admin.css for global styles, user.css for page-specific styles -->
+  <link rel="stylesheet" href="../CSS/admin.css" />
+  <link rel="stylesheet" href="../CSS/user.css" />
+
+  <!-- jsPDF library for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- jsPDF AutoTable plugin for rendering tables into PDFs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+  <!-- Firebase v8 SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Firebase config file for initialization -->
+  <script src="../JS/firebase-config.js"></script>
+
+  <!-- JS specific to this page's behavior -->
+  <script src="../JS/user.js"></script>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-left">
+      <!-- Logo image -->
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" alt="FitZone Logo" class="logo" />
+      <!-- Brand name -->
+      <span class="site-name">FitZone</span>
+    </div>
+    <div class="header-center">
+      <!-- Tagline -->
+      <span class="tagline">Power Through Progress</span>
+    </div>
+    <div class="header-right">
+      <!-- Social media icons with separators -->
+      <i class="fab fa-facebook-f"></i>
+      <span>|</span>
+      <i class="fab fa-instagram"></i>
+      <span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Content -->
+  <main>
+    <div class="container">
+      <!-- Page Heading -->
+      <h2>User Dashboard</h2>
+
+      <!-- Filter & Search Inputs -->
+      <div class="filters">
+        <!-- Plan filter dropdown -->
+        <select id="planFilter">
+  <option value="all">All Plans</option>
+  <option value="Basic">Basic</option>
+  <option value="Standard">Standard</option>
+  <option value="Premium">Premium</option>
+  <option value="Elite">Elite</option>
+</select>
+
+        <!-- Search box to filter table entries -->
+        <input type="text" id="searchInput" placeholder="Search..." />
+      </div>
+
+      <!-- Table to display user membership data -->
+      <div class="table-wrapper">
+        <table id="userTable">
+          <thead>
+            <tr>
+              <th>Member ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Plan</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <!-- Table body will be dynamically populated via JS -->
+          <tbody id="userBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <!-- About FitZone Column -->
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>
+          FitZone is your destination for strength, stamina, and transformation.
+          From expert guidance to advanced facilities, we help you redefine your fitness journey.
+        </p>
+      </div>
+
+      <!-- Why Choose Us Column -->
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br />
+          ✔ Personalized Workouts<br />
+          ✔ Flexible Memberships<br />
+          ✔ 24/7 Support<br />
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <!-- Corporate Office Info -->
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91-9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

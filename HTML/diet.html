@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags and page title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Weekly Diet Plan | FitZone</title>
+
+  <!-- Linking external CSS files -->
+  <link rel="stylesheet" href="../CSS/admin.css" />
+  <link rel="stylesheet" href="../CSS/diet.css" />
+
+  <!-- Font Awesome CDN for social/media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts: Bebas Neue for headings and Poppins for body text -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Optional: Redundant Font Awesome Kit script (already covered above via CDN) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header section containing logo, name, tagline, and social media icons -->
+  <header>
+    <div class="header-left">
+      <!-- Logo image: dumbbell icon -->
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" alt="FitZone Logo" class="logo" />
+      <span class="site-name">FitZone</span> <!-- Gym name -->
+    </div>
+
+    <div class="header-center">
+      <!-- Motivational tagline -->
+      <span class="tagline">Power Through Progress</span>
+    </div>
+
+    <div class="header-right">
+      <!-- Social media icons with separators -->
+      <i class="fab fa-facebook-f"></i>
+      <span>|</span>
+      <i class="fab fa-instagram"></i>
+      <span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- Main content section -->
+  <main>
+    <div class="diet-container">
+      <!-- Section heading -->
+      <h2>Weekly Diet Plan</h2>
+
+      <!-- Dropdown selector to choose diet goal -->
+      <select id="dietSelector">
+        <option value="weight">Weight Loss</option>
+        <option value="shred">Shredding</option>
+        <option value="maintain">Maintenance</option>
+        <option value="bulk">Bulk</option>
+      </select>
+
+      <!-- Placeholder div for dynamically loaded diet table -->
+      <div class="table-wrapper" id="dietTableContainer">
+        <!-- Diet table loads here via JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer section containing three informational columns -->
+  <footer>
+    <div class="footer-content">
+
+      <!-- About the FitZone brand -->
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>
+          FitZone is your destination for strength, stamina, and transformation.
+          From expert guidance to advanced facilities, we help you redefine your fitness journey.
+        </p>
+      </div>
+
+      <!-- Reasons to join FitZone -->
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br>
+          ✔ Personalized Workouts<br>
+          ✔ Flexible Memberships<br>
+          ✔ 24/7 Support<br>
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <!-- Contact and office address -->
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91-9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JavaScript file to handle diet plan rendering -->
+  <script src="../JS/diet.js"></script>
+</body>
+</html>

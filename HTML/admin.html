@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic document setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - FitZone</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="../CSS/admin.css" />
+
+  <!-- Google Fonts for typography styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Header with logo, tagline, and social media icons -->
+  <header>
+    <div class="header-left">
+      <!-- Dumbbell logo icon -->
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" alt="FitZone Logo" class="logo" />
+      <!-- Site name -->
+      <span class="site-name">FitZone</span>
+    </div>
+
+    <div class="header-center">
+      <!-- Motivational tagline -->
+      <span class="tagline">Power Through Progress</span>
+    </div>
+
+    <div class="header-right">
+      <!-- Social media icons with separators -->
+      <i class="fab fa-facebook-f"></i>
+      <span>|</span>
+      <i class="fab fa-instagram"></i>
+      <span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- Main section containing admin action buttons -->
+  <main id="mainContent">
+    <div class="button-group">
+      <!-- Buttons linking to various admin functionalities -->
+
+      <a href="../HTML/addmember.html"><button>Add Member</button></a>
+      <a href="../HTML/viewmembers.html"><button>View / Update / Delete Members</button></a>
+      <a href="../HTML/assignpackage.html"><button>Assign Fee Package</button></a>
+      <a href="../HTML/generatebill.html"><button>Generate Bill</button></a>
+      <a href="../HTML/viewbills.html"><button>View Bills</button></a>
+      <a href="../HTML/holiday.html"><button>Add Holiday/Announcements</button></a>
+      <a href="../HTML/viewholiday.html"><button>View Holiday/Announcements</button></a>
+      <a href="../HTML/notifications.html"><button>Upcoming Expirations</button></a>
+      <a href="../HTML/exportreports.html"><button>Export Reports</button></a>
+      <a href="../HTML/supplementstore.html"><button>Supplement Store</button></a>
+      <a href="../HTML/diet.html"><button>Diet Details</button></a>
+    </div>
+  </main>
+
+  <!-- Footer section with About, Benefits, and Contact Info -->
+  <footer>
+    <div class="footer-content">
+
+      <!-- About the platform -->
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>
+          FitZone is your destination for strength, stamina, and transformation.
+          From expert guidance to advanced facilities, we help you redefine your fitness journey.
+        </p>
+      </div>
+
+      <!-- Unique selling points -->
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br>
+          ✔ Personalized Workouts<br>
+          ✔ Flexible Memberships<br>
+          ✔ 24/7 Support<br>
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <!-- Corporate contact details -->
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91-9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDKs for app, authentication, and Firestore database -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- Project-specific Firebase configuration and admin logic -->
+  <script defer src="../JS/firebase-config.js"></script>
+  <script defer src="../JS/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Define character encoding -->
+  <meta charset="UTF-8" />
+  <!-- Responsive meta tag for all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Page title -->
+  <title>Monthly Notifications - FitZone</title>
+  
+  <!-- Link to external CSS file -->
+   <link rel="stylesheet" href="../CSS/admin.css" />
+  <link rel="stylesheet" href="../CSS/notifications.css" />
+  <link rel="stylesheet" href="../CSS/loginpage.css" />
+  
+  <!-- Preconnect to optimize loading of Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <!-- Google Fonts (Bebas Neue and Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+  <!-- HEADER SECTION -->
+  <header>
+    <!-- Left side: Logo and site name -->
+    <div class="header-left">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" alt="FitZone Logo" class="logo" />
+      <span class="site-name">FitZone</span>
+    </div>
+
+    <!-- Center: Tagline -->
+    <div class="header-center">
+      <span class="tagline">Power Through Progress</span>
+    </div>
+
+    <!-- Right side: Social media icons -->
+    <div class="header-right">
+      <i class="fab fa-facebook-f"></i>
+      <span>|</span>
+      <i class="fab fa-instagram"></i>
+      <span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="container">
+      <!-- Heading for notification section -->
+      <h2>Upcoming Plan Expirations</h2>
+
+      <!-- Informational message -->
+      <p class="notice-text">These members have plans expiring within the next 7 days:</p>
+
+      <!-- Table to display notifications -->
+      <table id="notificationTable">
+        <thead>
+          <tr>
+            <th>Member Name</th>
+            <th>Member ID</th>
+            <th>Plan</th>
+            <th>End Date</th>
+            <th>Days Left</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Notifications will be loaded here dynamically via JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <div class="footer-content">
+      
+      <!-- About section -->
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>
+          FitZone is your destination for strength, stamina, and transformation.
+          From expert guidance to advanced facilities, we help you redefine your fitness journey.
+        </p>
+      </div>
+
+      <!-- Reasons to choose FitZone -->
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br>
+          ✔ Personalized Workouts<br>
+          ✔ Flexible Memberships<br>
+          ✔ 24/7 Support<br>
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <!-- Office contact information -->
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91-9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FIREBASE CONFIGURATION & JS FILES -->
+  <!-- Firebase Core SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  
+  <!-- Firebase Authentication SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  
+  <!-- Firebase Firestore SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  
+  <!-- Your Firebase config file -->
+  <script src="../JS/firebase-config.js"></script>
+  
+  <!-- Custom JS to load notifications -->
+  <script src="../JS/notifications.js"></script>
+
+</body>
+</html>

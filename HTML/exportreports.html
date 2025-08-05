@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Document metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Export Reports - FitZone</title>
+
+  <!-- Linking external CSS stylesheets -->
+  <link rel="stylesheet" href="../CSS/admin.css" /> <!-- Main admin styles shared across pages -->
+  <link rel="stylesheet" href="../CSS/exportreports.css?v=2" /> <!-- Page-specific styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> <!-- Font Awesome for icons -->
+
+  <!-- Importing jsPDF and jsPDF AutoTable for PDF export functionality -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+  <!-- Page header section -->
+  <header>
+    <div class="header-left">
+      <!-- Site logo -->
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" class="logo" />
+      <span class="site-name">FitZone</span>
+    </div>
+    <div class="header-center">
+      <!-- Tagline -->
+      <span class="tagline">Power Through Progress</span>
+    </div>
+    <div class="header-right">
+      <!-- Social media icons -->
+      <i class="fab fa-facebook-f"></i><span>|</span>
+      <i class="fab fa-instagram"></i><span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- Main content section -->
+  <main>
+    <div class="container">
+      <!-- Section heading -->
+      <h2>Export Reports</h2>
+
+      <!-- Filter options: Plan dropdown and search input -->
+      <div class="filters">
+        <select id="planFilter">
+          <option value="all">All Plans</option>
+          <option>Basic</option>
+          <option>Standard</option>
+          <option>Premium</option>
+          <option>Elite</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search by name..." />
+      </div>
+
+      <!-- Table to display exportable data -->
+      <div class="table-wrapper">
+        <table id="exportTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Plan</th>
+              <th>Amount</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Action</th> <!-- For buttons like export/download -->
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody> <!-- Filled dynamically by JS -->
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Page footer section -->
+  <footer>
+    <div class="footer-content">
+
+      <!-- About section -->
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>
+          FitZone is your destination for strength, stamina, and transformation.
+          From expert guidance to advanced facilities, we help you redefine your fitness journey.
+        </p>
+      </div>
+
+      <!-- Reasons to choose the service -->
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br>
+          ✔ Personalized Workouts<br>
+          ✔ Flexible Memberships<br>
+          ✔ 24/7 Support<br>
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <!-- Office address and contact info -->
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91-9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Firebase project config -->
+  <script src="../JS/firebase-config.js"></script>
+
+  <!-- Page functionality JS -->
+  <script src="../JS/exportreports.js"></script>
+</body>
+</html>

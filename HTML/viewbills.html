@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta info and responsiveness -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Bills - FitZone</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="../CSS/viewbills.css" />
+  <link rel="stylesheet" href="../CSS/admin.css" />
+  <!-- Google Fonts: Bebas Neue and Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+</head>
+<body>
+
+  <!-- ---------- HEADER SECTION ---------- -->
+  <header>
+    <div class="header-left">
+      <!-- Logo Icon -->
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" alt="FitZone Logo" class="logo" />
+      <!-- Brand Name -->
+      <span class="site-name">FitZone</span>
+    </div>
+
+    <div class="header-center">
+      <!-- Tagline of the gym -->
+      <span class="tagline">Power Through Progress</span>
+    </div>
+
+    <div class="header-right">
+      <!-- Social media icons with separators -->
+      <i class="fab fa-facebook-f"></i>
+      <span>|</span>
+      <i class="fab fa-instagram"></i>
+      <span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- ---------- MAIN CONTENT ---------- -->
+  <main>
+    <div class="container">
+      <!-- Page Title -->
+      <h2>View Bills</h2>
+
+      <!-- Search input for filtering bills by member name -->
+      <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Search by name..." />
+      </div>
+
+      <!-- Table to display bills from Firestore -->
+      <table id="billTable">
+        <thead>
+          <tr>
+            <th>Member Name</th>
+            <th>Member ID</th>
+            <th>Email</th>
+            <th>Plan</th>
+            <th>Amount</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Action</th> <!-- This will contain buttons like Download/Delete -->
+          </tr>
+        </thead>
+        <tbody id="billsTableBody">
+          <!-- Bills will load here dynamically using JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="footer-content">
+
+      <!-- About section -->
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>
+          FitZone is your destination for strength, stamina, and transformation.
+          From expert guidance to advanced facilities, we help you redefine your fitness journey.
+        </p>
+      </div>
+
+      <!-- Reasons to choose FitZone -->
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br>
+          ✔ Personalized Workouts<br>
+          ✔ Flexible Memberships<br>
+          ✔ 24/7 Support<br>
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <!-- Contact and office address -->
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91-9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ---------- FIREBASE INTEGRATION ---------- -->
+
+  <!-- Firebase App SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+  <!-- Firebase Authentication (not used here, but included in case of login-based filtering) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+  <!-- Firebase Firestore SDK for database access -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Your Firebase project configuration -->
+  <script src="../JS/firebase-config.js"></script>
+
+  <!-- JavaScript logic to load and display bills -->
+  <script type="module" src="../JS/viewbills.js"></script>
+
+</body>
+</html>

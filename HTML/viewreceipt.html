@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Bill Receipt - FitZone</title>
+
+  <!-- CSS Stylesheets: Admin-wide and Page-specific -->
+  <link rel="stylesheet" href="../CSS/admin.css" />
+  <link rel="stylesheet" href="../CSS/viewreceipt.css" />
+  <link rel="stylesheet" href="../CSS/loginpage.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Social Media and Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JS Libraries for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER Section: Logo, Tagline, Social Media -->
+  <header>
+    <div class="header-left">
+      <!-- Gym Icon Logo -->
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" alt="FitZone Logo" class="logo" />
+      <span class="site-name">FitZone</span>
+    </div>
+    <div class="header-center">
+      <!-- Gym Tagline -->
+      <span class="tagline">Power Through Progress</span>
+    </div>
+    <div class="header-right">
+      <!-- Social Media Icons -->
+      <i class="fab fa-facebook-f"></i><span>|</span>
+      <i class="fab fa-instagram"></i><span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- MAIN Content: Table for Bill Details -->
+  <main>
+    <div class="container">
+  <h2>Your Bill Receipt</h2>
+  <div class="table-wrapper">
+    <table id="billTable">
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Amount</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+  </main>
+
+  <!-- FOOTER Section: About, Benefits, and Contact Info -->
+  <footer>
+    <div class="footer-content">
+
+      <!-- About Section -->
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>FitZone is your destination for strength, stamina, and transformation...</p>
+      </div>
+
+      <!-- Benefits List -->
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br>
+          ✔ Personalized Workouts<br>
+          ✔ Flexible Memberships<br>
+          ✔ 24/7 Support<br>
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <!-- Office Contact Information -->
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91‑9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Firebase Configuration Script -->
+  <script src="../JS/firebase-config.js"></script>
+
+  <!-- Custom Script to Load and Handle Bill Data -->
+  <script src="../JS/viewreceipt.js"></script>
+</body>
+</html>

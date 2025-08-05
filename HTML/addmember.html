@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character set and viewport for responsive design -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Page Title -->
+  <title>Add Member - FitZone</title>
+
+  <!-- Firebase v8 SDKs for app, Firestore (database), and Auth (authentication) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- Custom admin and page-specific styling -->
+  <link rel="stylesheet" href="../CSS/admin.css" />
+  <link rel="stylesheet" href="../CSS/addmember.css" />
+
+  <!-- Google Fonts for styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER SECTION ===== -->
+  <header>
+    <!-- Left part: logo and site name -->
+    <div class="header-left">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" alt="FitZone Logo" class="logo" />
+      <span class="site-name">FitZone</span>
+    </div>
+
+    <!-- Center part: tagline -->
+    <div class="header-center">
+      <span class="tagline">Power Through Progress</span>
+    </div>
+
+    <!-- Right part: social media icons -->
+    <div class="header-right">
+      <i class="fab fa-facebook-f"></i>
+      <span>|</span>
+      <i class="fab fa-instagram"></i>
+      <span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- ===== MAIN FORM SECTION ===== -->
+  <main>
+    <div class="addmember-container">
+      <h2>Add New Member</h2>
+
+      <!-- Add Member Form -->
+      <form id="addMemberForm">
+
+        <!-- Full name input -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <!-- Email input -->
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <!-- Age input -->
+        <label for="age">Age</label>
+        <input type="number" id="age" required>
+
+        <!-- Gender dropdown -->
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <!-- Phone number input -->
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" required>
+
+        <!-- Membership start date -->
+        <label for="startDate">Membership Start Date</label>
+        <input type="date" id="startDate" required>
+
+        <!-- Membership plan dropdown -->
+        <label for="plan">Membership Plan</label>
+        <select id="plan" required>
+          <option value="" disabled selected>Select Plan</option>
+          <option value="1 Month">1 Month</option>
+          <option value="3 Months">3 Months</option>
+          <option value="6 Months">6 Months</option>
+          <option value="1 Year">1 Year</option>
+        </select>
+
+        <!-- Submit button -->
+        <button type="submit">Add Member</button>
+
+        <!-- Error message if any validation/auth fails -->
+        <p class="error-msg" id="errorMsg"></p>
+      </form>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER SECTION ===== -->
+  <footer>
+    <div class="footer-content">
+      
+      <!-- About section -->
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>
+          FitZone is your destination for strength, stamina, and transformation.
+          From expert guidance to advanced facilities, we help you redefine your fitness journey.
+        </p>
+      </div>
+
+      <!-- Why Choose Us section -->
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br>
+          ✔ Personalized Workouts<br>
+          ✔ Flexible Memberships<br>
+          ✔ 24/7 Support<br>
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <!-- Corporate office contact -->
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91-9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase project configuration and initialization -->
+  <script src="../JS/firebase-config.js"></script>
+
+  <!-- JS logic for adding new member -->
+  <script type="module" src="../JS/addmember.js"></script>
+  <script type="module" src="../JS/logger.js"></script>
+</body>
+</html>

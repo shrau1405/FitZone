@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata for character encoding and responsiveness -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - FitZone</title>
+
+  <!-- Font Awesome for social media icons and others -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS Files -->
+  <link rel="stylesheet" href="../CSS/loginpage.css" />
+  <link rel="stylesheet" href="../CSS/admin.css" />
+
+  <!-- Google Fonts (Bebas Neue for tagline, Poppins for content) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Firebase SDKs (App, Auth, Firestore - for login functionality) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- Your Firebase configuration (stored in firebase-config.js) -->
+  <script defer src="../JS/firebase-config.js"></script>
+
+  <!-- Login form logic and validation -->
+  <script defer src="../JS/loginpage.js"></script>
+
+  <!-- (Duplicate include of loginpage.js, can remove one later if needed) -->
+  <script defer src="../JS/loginpage.js"></script>
+</head>
+<body>
+
+  <!-- Header section with logo, tagline, and social media icons -->
+  <header>
+    <div class="header-left">
+      <!-- Dumbbell icon as logo -->
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/dumbbell.png" alt="FitZone Logo" class="logo" />
+      <span class="site-name">FitZone</span>
+    </div>
+    <div class="header-center">
+      <!-- Motivational tagline -->
+      <span class="tagline">Power Through Progress</span>
+    </div>
+    <div class="header-right">
+      <!-- Social media icons with separators -->
+      <i class="fab fa-facebook-f"></i>
+      <span>|</span>
+      <i class="fab fa-instagram"></i>
+      <span>|</span>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </header>
+
+  <!-- Main content: Login Form -->
+  <main>
+    <div class="login-container">
+      <h2>Login to FitZone</h2>
+      <form id="loginForm">
+        <!-- Role selection dropdown -->
+        <label for="role">Select Role</label>
+        <select id="role" required>
+          <option value="">-- Select Role --</option>
+          <option value="admin">Admin</option>
+          <option value="member">Member</option>
+          <option value="user">User</option>
+        </select>
+
+        <!-- Email input -->
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="Enter email" />
+
+        <!-- Password input -->
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="Enter password" />
+
+        <!-- Submit login form -->
+        <button type="submit">Login</button>
+
+        <!-- Error message display -->
+        <div class="error-msg" id="errorMsg"></div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer Section with about, benefits, and contact info -->
+  <footer>
+    <div class="footer-content">
+      <!-- About FitZone description -->
+      <div class="about">
+        <h3>About FitZone</h3>
+        <p>
+          FitZone is your destination for strength, stamina, and transformation.
+          From expert guidance to advanced facilities, we help you redefine your fitness journey.
+        </p>
+      </div>
+
+      <!-- Reasons to choose FitZone -->
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <p>
+          ✔ Certified Trainers<br>
+          ✔ Personalized Workouts<br>
+          ✔ Flexible Memberships<br>
+          ✔ 24/7 Support<br>
+          ✔ High-End Equipment
+        </p>
+      </div>
+
+      <!-- Corporate Office Contact Details -->
+      <div class="office">
+        <h3>Corporate Office</h3>
+        <p>2025 IronFit Complex, Sector 21B, Prime Arena, Mumbai, India 400101</p>
+        <p>+91-9988776655</p>
+        <p>support@fitzone.com</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
