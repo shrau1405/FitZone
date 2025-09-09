@@ -1,59 +1,61 @@
+// loginpage.js
+
 // Attach a submit event listener to the login form
 document.getElementById("loginForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the default form submission behavior
+  e.preventDefault(); // Prevent the default form submission
 
-  // Get the selected role from the dropdown
-  const selectedRole = document.getElementById("role").value;
-  // Get the entered email and trim whitespace
+  // Get the selected role from dropdown and convert to lowercase
+  const selectedRole = document.getElementById("role").value.toLowerCase();
+  // Get the email and password inputs
   const email = document.getElementById("email").value.trim();
-  // Get the entered password
   const password = document.getElementById("password").value;
-  // Reference to the error message element to display login errors
+  // Reference to error message element
   const errorMsg = document.getElementById("errorMsg");
 
-  // Authenticate user with Firebase Authentication using email and password
+  // Clear previous error
+  errorMsg.textContent = "";
+
+  // Debug logs to see what values are being read
+  console.log("Attempting login with:", email, password, selectedRole);
+
+  // Firebase Authentication - sign in with email and password
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      // Extract the user ID of the logged-in user
       const uid = userCredential.user.uid;
 
-      // Return a Firestore document from 'users' collection for this UID
+      // Fetch the user document from 'users' collection
       return firebase.firestore().collection("users").doc(uid).get();
     })
     .then((doc) => {
-      // Check if the document exists in the Firestore 'users' collection
       if (doc.exists) {
-        // Extract the role stored in the Firestore document
-        const role = doc.data().role;
+        // Get the role from Firestore and convert to lowercase
+        const role = doc.data().role.toLowerCase();
+        console.log("Firestore role:", role);
 
-        // Check if the selected role matches the user's stored role
+        // Check if selected role matches Firestore role
         if (role === selectedRole) {
-          // ✅ Added: Log user login action (for internship logging requirement)
           console.log(`User logged in as ${role} with email: ${email}`);
 
-          // Redirect the user to the corresponding dashboard based on role
+          // Redirect based on role
           if (role === "admin") {
-            window.location.href = "admin.html"; // Admin page
+            window.location.href = "admin.html";
           } else if (role === "member") {
-            window.location.href = "member.html"; // Member page
+            window.location.href = "member.html";
           } else if (role === "user") {
-            window.location.href = "user.html"; // User page
+            window.location.href = "user.html";
           } else {
-            // Unknown role that isn't handled
             errorMsg.textContent = "Unknown role detected.";
           }
         } else {
-          // The selected role doesn't match the role stored in Firestore
           errorMsg.textContent = "Selected role doesn't match user's role.";
         }
       } else {
-        // Firestore document does not exist for the UID
         errorMsg.textContent = "No role information found for this user.";
       }
     })
     .catch((error) => {
-      // Catch authentication or Firestore errors and show error message
-      errorMsg.textContent = "Invalid email or password combination. Please try again.";
+      console.error("Login error:", error);
+      // Display the Firebase error message
+      errorMsg.textContent = error.message;
     });
-
 });
